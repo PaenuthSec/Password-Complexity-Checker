@@ -4,12 +4,13 @@ A Python application that evaluates password strength based on multiple security
 
 ## Features
 
-- Checks password strength against 5 key criteria:
+- Checks password strength against 6 key criteria:
   - Minimum length (8 characters)
   - Uppercase letters
   - Lowercase letters
   - Numbers
   - Special characters
+  - Not a commonly used password
 - Provides a strength rating (Weak, Moderate, Strong, Very Strong)
 - Displays detailed analysis with visual indicators (✓/✗)
 
@@ -21,7 +22,7 @@ A Python application that evaluates password strength based on multiple security
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/[your-username]/Password-Complexity-Checker.git
+git clone https://github.com/PaenuthSec/Password-Complexity-Checker.git
 cd Password-Complexity-Checker
 ```
 
@@ -74,6 +75,22 @@ For a "Very Strong" password rating, all of the following criteria must be met:
 - Contains at least one lowercase letter (a-z)
 - Contains at least one number (0-9)
 - Contains at least one special character (!@#$%^&*(),.?":{}|<>)
+- Must not be a commonly used password
+
+### Common Password Protection
+
+The checker includes protection against commonly used passwords. Even if a password meets all the basic complexity requirements, it will be flagged if it matches known common passwords (e.g., 'Password123', 'Admin123', etc.). This helps prevent the use of passwords that are:
+- Frequently used and predictable
+- Commonly found in password breach databases
+- Easy to guess despite meeting complexity requirements
+
+### Note on Limitations
+
+While this checker provides good basic security guidelines, for maximum security you should also consider:
+- Using a password manager
+- Never reusing passwords across different accounts
+- Making passwords longer than the minimum 8 characters
+- Using randomly generated passwords when possible
 
 ## Contributing
 
@@ -81,4 +98,4 @@ Feel free to open issues or submit pull requests with improvements.
 
 ## License
 
-This project is open source and available under the [MIT License](LICENSE).
+This project is open source.
